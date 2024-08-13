@@ -1,0 +1,19 @@
+.g-invalid label {
+    color: red;
+}
+
+.g-invalid input {
+    border: 1px solid red;
+}
+
+.g-invalid .error-message {
+    display: block;
+}
+
+.error-message {
+    display: none;
+}
+
+.g-invalid .error-message p {
+    color: red;
+}
