@@ -2,7 +2,7 @@
     color: red;
 }
 
-.g-invalid input {
+body form .g-invalid input {
     border: 1px solid red;
 }
 
@@ -16,4 +16,6 @@
 
 .g-invalid .error-message p {
     color: red;
+    margin: 0;
+    margin-top: 0.2rem;
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardForm Demo</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/style.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+</head>
+<body>
+    <main class="guardform-demo">
+        <h1>Demo GuardForm - Simple form validation (Client Side)</h1>
+        <form id="test-validate">
+            <input type="text" class="guard-input g-required" id="firstname" />
+            <input type="text" class="guard-input g-required" id="lastname" />
+            <input type="text" class="guard-input g-number" id="age" />
+            <input type="text" class="guard-input g-date" id="date"/>
+            <input type="text" class="guard-input g-email g-required" id="email" />
+            <input type="text" class="guard-input" data-custom-regex="^[A-Za-z]+$" id="regex" />
+            <button type="submit" id="btnTestValidate">Submit</button>
+        </form>
+        <p class="detail">For the detail please visit <a href="https://github.com/eLDoherty/guardForm">GuardForm Repository</a></p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.js"></script>
+
+    <script>
+        // Make sure initiate GuardForm after document already fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const formElement = document.getElementById('test-validate');
+            if (formElement) {
+                formElement.guardForm();
+            }
+        });
+    </script>
+
+
+</body>
+</html>
