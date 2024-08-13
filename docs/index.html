@@ -21,16 +21,51 @@
             <button type="submit" id="btnTestValidate">Submit</button>
         </form>
         <p class="detail">For the detail please visit <a href="https://github.com/eLDoherty/guardForm">GuardForm Repository</a></p>
+        <br>
+        <p class="detail" style="font-weight: 600;">MADE WITH LOVE</p>
+        <p class="detail" style="margin-top: 5px;"><a style="color: red;" href="https://github.com/eLDoherty/">Leonardo Doherty</a></p>
     </main>
 
     <script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.js"></script>
 
     <script>
-        // Make sure initiate GuardForm after document already fully loaded
+        //Make sure initiate GuardForm after document already fully loaded
+
+        /* 
+        Actuallty you just need to simple initiate like this :
+        =================================================================
         document.addEventListener('DOMContentLoaded', () => {
             const formElement = document.getElementById('test-validate');
             if (formElement) {
                 formElement.guardForm();
+            }
+        });
+        =================================================================
+        */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const formElement = document.getElementById('test-validate');
+            
+            if (formElement) {
+                formElement.guardForm();
+
+                formElement.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    let isValid = true;
+
+                    formElement.querySelectorAll('.input-container').forEach(container => {
+                        if (container.classList.contains('g-invalid')) {
+                            isValid = false;
+                        }
+                    });
+
+                    if (isValid) {
+                        const firstName = document.getElementById('firstname').value;
+                        const lastName = document.getElementById('lastname').value;
+                        alert(`Hi, ${firstName} ${lastName}!. Happy to see you try GuardForm demo :)`);
+                    } 
+                });
             }
         });
     </script>
