@@ -1,10 +1,10 @@
-Here's a README file to document the usage of your `guardForm` mini-library for form validation:
+GuardForm Simple Form Validation
 
 ---
 
-# `guardForm` Mini Library
+# `GuardForm` Simple Form Validation
 
-`guardForm` is a lightweight JavaScript library for validating HTML forms. It provides basic validation for required fields, numbers, dates, emails, and custom regex patterns. This library extends the `HTMLElement` prototype to include a `guardForm` method that you can use to easily validate forms.
+`GuardForm` is a light JavaScript library for validating HTML forms (client side). It provides basic validation for required fields, numbers, dates, emails, and custom regex patterns. This library extends the `HTMLElement` prototype to include a `guardForm` method that you can use to easily validate forms.
 
 ## Features
 
@@ -14,7 +14,7 @@ Here's a README file to document the usage of your `guardForm` mini-library for 
 
 ## Installation
 
-Include the `guardForm` script in your HTML file. 
+Downlod and Include the `guardForm` script in your HTML file. 
 
 ```html
 <script src="path/to/guardForm.js"></script>
@@ -39,6 +39,15 @@ Include the `guardForm` script in your HTML file.
 document.getElementById('myForm').guardForm();
 ```
 
+**Or you can just simply use this :**
+```HTML 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/style.css" />
+	<script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.js"></script>
+	
+	// For minified version
+	<script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.min.js"></script>
+```
+
 ### Example form
 
 ```HTML 
@@ -52,7 +61,7 @@ document.getElementById('myForm').guardForm();
     </form>
 ```
 
-### Form above will be turn like below
+### Form above will be automatically turn into like below
 
 ```HTML 
     <form id="myForm">
@@ -145,8 +154,6 @@ function isValidEmail(email) {
 This library is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
-
-This README provides a comprehensive guide on how to use the `guardForm` library, including installation, usage, and API details. Adjust any paths or specifics according to your actual implementation and repository structure.
 
 ## Best Regards
 [Leonardo Doherty](https://eldoherty.github.io/resume-portofolios/)
