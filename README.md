@@ -14,7 +14,7 @@ Here's a README file to document the usage of your `guardForm` mini-library for 
 
 ## Installation
 
-Include the `guardForm` script in your HTML file. Ensure that jQuery is loaded before including this script if your implementation depends on it (although the provided script doesn't use jQuery directly).
+Include the `guardForm` script in your HTML file. 
 
 ```html
 <script src="path/to/guardForm.js"></script>
@@ -35,26 +35,26 @@ Include the `guardForm` script in your HTML file. Ensure that jQuery is loaded b
 
 3. **Call `guardForm` on the Form**: Call the `guardForm` method on the form element you want to validate.
 
-### Example
+```javascript
+document.getElementById('myForm').guardForm();
+```
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation Example</title>
-    <style>
-        .error-message {
-            color: red;
-            display: none;
-        }
-        .g-invalid .error-message {
-            display: block;
-        }
-    </style>
-</head>
-<body>
+### Example form
+
+```HTML 
+    <form id="myForm">
+        <input type="text" id="name" class="guard-input g-required">
+        <input type="text" id="age" class="guard-input g-number">
+        <input type="text" id="birthdate" class="guard-input g-date">
+        <input type="text" id="email" class="guard-input g-email">
+        <input type="text" id="custom" class="guard-input" data-custom-regex="^[a-zA-Z]+$">
+        <button type="submit">Submit</button>
+    </form>
+```
+
+### Form above will be turn like below
+
+```HTML 
     <form id="myForm">
         <div class="input-container">
             <label for="name">Name</label>
@@ -83,13 +83,6 @@ Include the `guardForm` script in your HTML file. Ensure that jQuery is loaded b
         </div>
         <button type="submit">Submit</button>
     </form>
-
-    <script src="path/to/guardForm.js"></script>
-    <script>
-        document.getElementById('myForm').guardForm();
-    </script>
-</body>
-</html>
 ```
 
 ## API
@@ -121,7 +114,7 @@ HTMLElement.prototype.guardForm = function () {
 - **Custom Regex Error**: Displayed if a field does not match the provided custom regex pattern.
 - **Regex Error**: Displayed if a field does not match the provided regex pattern.
 
-## Functions
+## Editable functions
 
 ### `isValidDate(dateString)`
 
@@ -154,3 +147,6 @@ This library is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 This README provides a comprehensive guide on how to use the `guardForm` library, including installation, usage, and API details. Adjust any paths or specifics according to your actual implementation and repository structure.
+
+## Best Regards
+[Leonardo Doherty](https://eldoherty.github.io/resume-portofolios/)
