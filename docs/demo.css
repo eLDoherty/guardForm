@@ -37,7 +37,7 @@ form {
     flex-direction: column;
 }
 
-input.guard-input {
+input {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
@@ -79,4 +79,8 @@ p a {
 
 p a:hover {
     text-decoration: underline;
+}
+
+.error-message p {
+    margin-top: 0.5rem;
 }
