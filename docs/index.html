@@ -12,12 +12,13 @@
     <main class="guardform-demo">
         <h1>Demo GuardForm - Simple form validation (Client Side)</h1>
         <form id="test-validate">
+            <input type="text" class="guard-input" id="unrequired" />
             <input type="text" class="guard-input g-required" id="firstname" />
             <input type="text" class="guard-input g-required" id="lastname" />
-            <input type="text" class="guard-input g-number" id="age" />
-            <input type="text" class="guard-input g-date" id="date"/>
+            <input type="text" class="guard-input g-number g-required" id="age" />
+            <input type="text" class="guard-input g-date g-required" id="date"/>
             <input type="text" class="guard-input g-email g-required" id="email" />
-            <input type="text" class="guard-input" data-custom-regex="^[A-Za-z]+$" id="regex" />
+            <input type="text" class="guard-input g-required" data-custom-regex="^[A-Za-z]+$" id="regex" />
             <button type="submit" id="btnTestValidate">Submit</button>
         </form>
         <p class="detail">For the detail please visit <a href="https://github.com/eLDoherty/guardForm">GuardForm Repository</a></p>
@@ -69,7 +70,5 @@
             }
         });
     </script>
-
-
 </body>
 </html>
