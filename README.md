@@ -20,6 +20,19 @@ Downlod and Include the `guardForm` script in your HTML file.
 <script src="path/to/guardForm.js"></script>
 ```
 
+**Or you can just simply use this :**
+```HTML 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/style.css" />
+<script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.js"></script>
+
+// For minified version
+<script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.min.js"></script>
+```
+
+```javascript
+document.getElementById('myForm').guardForm();
+```
+
 ## Usage
 
 ### Adding `guardForm` to Your Form
@@ -34,19 +47,6 @@ Downlod and Include the `guardForm` script in your HTML file.
    - `data-custom-regex`: Applies a custom regex pattern.
 
 3. **Call `guardForm` on the Form**: Call the `guardForm` method on the form element you want to validate.
-
-```javascript
-document.getElementById('myForm').guardForm();
-```
-
-**Or you can just simply use this :**
-```HTML 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/style.css" />
-	<script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.js"></script>
-	
-	// For minified version
-	<script src="https://cdn.jsdelivr.net/gh/eLDoherty/guardForm@main/guardForm.min.js"></script>
-```
 
 ### Example form
 
