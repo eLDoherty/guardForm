@@ -6,6 +6,10 @@ GuardForm Simple Form Validation
 
 `GuardForm` is a light JavaScript library for validating HTML forms (client side). It provides basic validation for required fields, numbers, dates, emails, and custom regex patterns. This library extends the `HTMLElement` prototype to include a `guardForm` method that you can use to easily validate forms.
 
+`GuardForm` will not affected your current CSS style. But sometimes your field border will turn into 'red' when the field got the error input. But you can just easily override the css.
+
+You can see the demo here : [GuardForm Demo](https://eldoherty.github.io/resume-portofolios/)
+
 ## Features
 
 - **Field Validation**: Checks for required fields, numbers, dates, emails, and custom patterns.
