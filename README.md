@@ -8,7 +8,7 @@ GuardForm Simple Form Validation
 
 `GuardForm` will not affected your current CSS style. But sometimes your field border will turn into 'red' when the field got the error input. But you can just easily override the css.
 
-You can see the demo here : [GuardForm Demo](https://eldoherty.github.io/resume-portofolios/)
+You can see the demo here : [GuardForm Demo](https://eldoherty.github.io/guardForm/)
 
 ## Features
 
